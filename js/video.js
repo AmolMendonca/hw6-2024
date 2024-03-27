@@ -14,7 +14,9 @@ window.addEventListener("load", function() {
 document.getElementById("play").addEventListener("click", function() {
     console.log("Play Video");
     video.play();
+    // Update the volume display here to ensure it reflects the current volume when the video plays
     volumeDisplay.textContent = (video.volume * 100).toFixed(0) + "%";
+    console.log("Volume is: " + video.volume * 100 + "%");
 });
 
 document.getElementById("pause").addEventListener("click", function() {
